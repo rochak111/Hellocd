@@ -12,14 +12,15 @@ pipeline {
             steps {
                 // Use MSBuild to compile the C# project
                 // Example command:
-                // bat 'msbuild YourProject.sln'
+                bat 'msbuild HelloCD.sln'
+                //bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe" HelloCD.sln'
             }
         }
         stage('Deploy') {
             steps {
                 // Use FTP Publisher to upload the executable to the FTP server
                 // Example configuration:
-                // ftpPublisher(credentialsId: 'your_ftp_credentials', serverName: 'ftp.example.com', transfers: [[$class: 'FileTransfer', sourceFiles: 'path/to/executable.exe', remoteDirectory: '/upload/directory']])
+                ftpPublisher(credentialsId: 'android', serverName: 'ftp://192.168.1.88:2221', transfers: [[$class: 'FileTransfer', sourceFiles: 'HelloCD\bin\Release\HelloCD.exe', remoteDirectory: '/']])
             }
         }
     }
