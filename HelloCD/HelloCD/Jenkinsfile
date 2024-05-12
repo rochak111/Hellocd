@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from your version control system
+                // For example, if you're using Git:
+                git 'https://github.com/rochak111/Hellocd.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                // Use MSBuild to compile the C# project
+                // Example command:
+                // bat 'msbuild YourProject.sln'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Use FTP Publisher to upload the executable to the FTP server
+                // Example configuration:
+                // ftpPublisher(credentialsId: 'your_ftp_credentials', serverName: 'ftp.example.com', transfers: [[$class: 'FileTransfer', sourceFiles: 'path/to/executable.exe', remoteDirectory: '/upload/directory']])
+            }
+        }
+    }
+}
