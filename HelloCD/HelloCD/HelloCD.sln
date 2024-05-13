@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCD", "HelloCD\HelloCD.csproj", "{5D636D04-25D6-455F-BA34-AD5284163884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{EDB7ECD0-9028-401D-AC93-7723453B6326}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCD", "HelloCD/HelloCD/HelloCD/HelloCD.csproj", "{EDB7ECD0-9028-401D-AC93-7723453B6326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
